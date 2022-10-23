@@ -10,6 +10,8 @@ public class PromoTypeFactory {
 			promoType = new ComboPrice();
 		} else if(type.indexOf("REGULAR", 0) > -1) {
 			promoType = new RegularPrice();
+		} else if(type.indexOf("PERCENTAGE", 0) > -1) {
+			promoType = new PercentagePrice();
 		} else {
 			promoType = new PriceExcluded();
 		}

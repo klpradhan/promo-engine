@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
@@ -101,7 +100,7 @@ class PromoEngineTest {
 	}
 	
 	@Test
-	@DisplayName("PEFCENTAGE_E")
+	@DisplayName("PERCENTAGE_E")
 	void Scenario_D_Test() {
 		Map<String, String> cartList = new HashMap<>();
 		cartList.put("E", "2");

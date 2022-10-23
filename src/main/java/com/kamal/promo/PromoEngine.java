@@ -59,7 +59,7 @@ public class PromoEngine {
 				// applied to a SKU
 				String promoSelected = promos.get(0);
 				String[] promoVal = promoSelected.split("_");
-				if ("FIXED".equals(promoVal[0])) {
+				if ("FIXED".equals(promoVal[0]) || "PERCENTAGE".equals(promoVal[0])) {
 					// sample promo: FIXED_A_3_130
 					promoToCartItem.put(promoSelected, new ArrayList<String>(Arrays.asList(sku, cartList.get(sku))));
 				} else if ("COMBO".equals(promoVal[0])) {
