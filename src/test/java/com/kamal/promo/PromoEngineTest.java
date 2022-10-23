@@ -37,7 +37,7 @@ class PromoEngineTest {
 	void FIXED_A_3_130() {
 		Map<String, String> cartList = new HashMap<>();
 		cartList.put("A", "5");
-		double expected = 0;
+		double expected = 230;
 		double actual = promoEngine.calculateTotalOrderValue(cartList);
 		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
 	}
