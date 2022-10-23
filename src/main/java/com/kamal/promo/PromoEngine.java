@@ -65,19 +65,19 @@ public class PromoEngine {
 				} else if ("COMBO".equals(promoVal[0])) {
 					// sample promo: COMBO_C_D_1_30
 					String comboSku = new String();
-					if (sku.equals(promoVal[1])) {
+					if(sku.equals(promoVal[1])) {
 						comboSku = promoVal[2];
 					} else {
 						comboSku = promoVal[1];
 					}
-					if (cartList.containsKey(comboSku)) {
+					if(cartList.containsKey(comboSku)) {
 						promoToCartItem.put("IGNORE", new ArrayList<String>(Arrays.asList(sku, cartList.get(sku))));
-						promoToCartItem.put(promoSelected,
-								new ArrayList<String>(Arrays.asList(comboSku, cartList.get(comboSku))));
+						promoToCartItem.put(promoSelected, new ArrayList<String>(Arrays.asList(comboSku, cartList.get(comboSku))));
 						skuVisited.add(comboSku);
 					} else {
 						promoToCartItem.put("REGULAR", new ArrayList<String>(Arrays.asList(sku, cartList.get(sku))));
 					}
+
 				}
 			} else {
 				promoToCartItem.put("REGULAR", new ArrayList<String>(Arrays.asList(sku, cartList.get(sku))));
