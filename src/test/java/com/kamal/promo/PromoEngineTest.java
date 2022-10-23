@@ -41,5 +41,26 @@ class PromoEngineTest {
 		double actual = promoEngine.calculateTotalOrderValue(cartList);
 		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
 	}
+	
+	@Test
+	@DisplayName("FIXED_B_2_45")
+	void Fixed_B_test() {
+		Map<String, String> cartList = new HashMap<>();
+		cartList.put("B", "5");
+		double expected = 120;
+		double actual = promoEngine.calculateTotalOrderValue(cartList);
+		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
+	}
+	
+	@Test
+	@DisplayName("COMBO_C_D_1_30")
+	void Combo_C_D_Test() {
+		Map<String, String> cartList = new HashMap<>();
+		cartList.put("C", "1");
+		cartList.put("D", "1");
+		double expected = 30;
+		double actual = promoEngine.calculateTotalOrderValue(cartList);
+		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
+	}
 
 }
