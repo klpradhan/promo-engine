@@ -28,12 +28,14 @@ public class PromoEngineUtils {
 		unitPrice.put("B",(double) 30);
 		unitPrice.put("C",(double) 20);
 		unitPrice.put("D",(double) 15);
+		unitPrice.put("E",(double) 60);
 		
 		activePromotions = new HashMap<String, List<String>>();
 		activePromotions.put("A", new ArrayList<String>(Arrays.asList("FIXED_A_3_130")));
 		activePromotions.put("B", new ArrayList<String>(Arrays.asList("FIXED_B_2_45")));
 		activePromotions.put("C", new ArrayList<String>(Arrays.asList("COMBO_C_D_1_30")));
 		activePromotions.put("D", new ArrayList<String>(Arrays.asList("COMBO_C_D_1_30")));
+		activePromotions.put("E", new ArrayList<String>(Arrays.asList("PERCENTAGE_E_10")));
 		
 	}
 
