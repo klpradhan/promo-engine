@@ -87,4 +87,17 @@ class PromoEngineTest {
 		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
 	}
 	
+	@Test
+	@DisplayName("SCENARIO_C")
+	void Scenario_C_Test() {
+		Map<String, String> cartList = new HashMap<>();
+		cartList.put("A", "3");
+		cartList.put("B", "5");
+		cartList.put("C", "1");
+		cartList.put("D", "1");
+		double expected = 280;
+		double actual = promoEngine.calculateTotalOrderValue(cartList);
+		assertEquals(expected, actual, () -> "should return sum " + expected + " but returned " + actual);
+	}
+	
 }
